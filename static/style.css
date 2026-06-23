@@ -1,0 +1,662 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+      background-color: navy;
+}
+
+/*menu styling for light on dark background*/
+
+.spacer {
+    visibility: hidden;
+    flex-grow: 1;
+    min-width: 50px;
+}
+
+.justlogo {
+    flex-shrink: 0;
+    width: 150px;
+    height: auto;
+    border-style: double;
+    border-color: white;
+    border-width: 3px;
+}
+.logo-and-menu-light-on-dark {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 20px;
+    z-index: 1;
+}
+
+.logo-and-menu-light-on-dark ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /*margin-left: 990px;*/
+    /*margin-top: -50px;*/
+    z-index: 1;
+}
+/*leave as is*/
+.logo-and-menu-light-on-dark ul li {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*leave as is*/
+.logo-and-menu-light-on-dark ul li a {
+    color: white;
+    font-size: 20px;
+    padding: 10px 12px;
+    text-decoration: none;
+    text-shadow: -1px 1px 0 black;
+}
+
+/*leave as is*/
+ul li a:hover {
+  background-color: gray;
+}
+
+
+/*menu styling for dark-on-light background*/
+.logo-and-menu-dark-on-light {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 20px;
+    z-index: 1;
+}
+
+.logo-and-menu-dark-on-light ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /*margin-left: 990px;*/
+    /*margin-top: -50px;*/
+    z-index: 1;
+}
+/*leave as is*/
+.logo-and-menu-dark-on-light ul li {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*leave as is*/
+.logo-and-menu-dark-on-light ul li a {
+    color: black;
+    font-size: 20px;
+    padding: 10px 12px;
+    text-decoration: none;
+    text-shadow: -1px 1px 0 white;
+}
+@media screen and (max-width: 600px) {
+    .logo-and-menu-light-on-dark .logo-menu-dark-on-light {
+        flex-direction: column;
+    }
+}
+
+.story-script-regular {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+/*home/index page styling*/
+.hometextoverlay {
+    color: white;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.homeimage img {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: 0;
+    animation: slowZoom 7s ease-in-out infinite alternate;
+    transform-origin: center center;
+}
+
+.hometext {
+    width: 100%;
+    font-family: "Story-Script", serif;
+    font-size: 60px;
+    font-style: italic;
+    text-align: center;
+    text-shadow: -2px 2px 0 black;
+}
+@media screen and (max-width: 600px) {
+    span.hometextoverlay, div.hero-cards{
+        flex-direction: column;
+    }
+}
+
+@keyframes slowZoom {
+    0% {transform: scale(1)}
+    100% {transform: scale(1.1)}
+}
+
+.hero-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .hero-cards {
+        flex-direction: column;
+    }
+}
+
+.hero-cards div {
+    /*width: 50%;*/
+    max-width: 50%;
+    margin: 15px;
+    padding-top: 150px;
+    z-index: 1;
+    }
+
+.biblestudy img {
+    /*width: 100%;*/
+    max-width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+/*Watch page styling*/
+
+.watchIntro {
+    text-align: center;
+    color: cornflowerblue;
+    text-shadow: 1px 1px 0 black;
+    font-style: italic;
+    padding-top: 8%;
+}
+.vid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 5px;
+    gap: 5px;
+    margin-left: 75px;
+    }
+
+@media screen and (max-width: 600px) {
+    .vid-container {
+        flex-direction: row;
+    }
+}
+
+.watchOutro {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/*what we believe styling*/
+
+.believeIntro {
+    text-align: center;
+    color: black;
+    font-style: italic;
+    padding-top: 8%;
+
+}
+
+.believeIntro h2{
+    font-style: normal;
+    color: rgb(0 112 192);
+    text-shadow: -1px 0 0 black;
+}
+
+.believe-cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 5px;
+    gap: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .believe-cards {
+        flex-direction: column;
+    }
+}
+
+
+
+.believe-cards .single-card:hover {
+    /*animation: enlarge 3s ease-in;*/
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
+.believe-break {
+    border: none;
+    height: 3px;
+    background-color: rgb(0 112 192);
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+/*Contact form styling*/
+.contact-header {
+    padding-top: 10%;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px 0 white;
+}
+.contact-header1 {
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px 0 white;
+}
+
+.contact-flex-box {
+    display: flex;
+    flex-direction: row;
+    padding: 1px;
+    gap: 5px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .contact-flex-box {
+        flex-direction: column;
+    }
+}
+.contact-form {
+    width: 50%;
+    max-width: 75%;
+    margin: auto;
+    padding: 2%;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Style text inputs, email inputs, and textarea */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Change button color on hover */
+button[type="submit"]:hover {
+    background-color: #D3D3D3;
+}
+
+/* message on send */
+#responseMessage {
+     margin-top: 20px;
+     font-weight: bold;
+    color: white;
+    text-align: center;
+}
+.success { color: green; }
+.error { color: red; }
+
+/*.rotate-img {*/
+/*    width: 200px;*/
+/*    height: 300px;*/
+/*}*/
+
+/*.rotate {*/
+/*    animation: rotate;*/
+/*    animation-timing-function: ease-in-out;*/
+/*    animation-delay: 2s;*/
+/*    transform-origin: center center;*/
+/*}*/
+/*studies page styling*/
+
+.bible-study-headline {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+    font-size: 200%;
+    text-align: center;
+    color: white;
+    text-shadow: -1px 1px 0 black;
+}
+
+.current-study {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    gap: 10px;
+    justify-content: center
+}
+
+@media screen and (max-width: 600px) {
+    .current-study {
+        flex-direction: column;
+    }
+}
+
+.acts-study-pic {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+.studies-text{
+    width: 100%;
+    max-width: 100%;
+}
+.studies-text H1 {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    text-shadow: -1px 1px 0 black;
+}
+
+.studies-text h2 {
+    color: white;
+    text-shadow: -1px 1px 0 black;
+}
+.study-books {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.study-books H2 {
+    color: white;
+    text-shadow: -1px 1px 0 black;
+}
+
+.study-books img {
+    width: 75%;
+    height: auto;
+    padding-left: 25%;
+}
+
+/*meet the staff styling*/
+.staff-bios {
+    padding-top: 12%;
+}
+
+.staff-bios H1 {
+    color: white;
+    text-align: center;
+    text-shadow: -1px -1px 0 black;
+}
+
+.staff-pic-left{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 40px;
+    justify-content: center;
+}
+
+.staff-pic-right {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 40px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+    .staff-pic-left .staff-pic-right {
+        flex-direction: column;
+    }
+}
+
+/*about page styling*/
+.about-break .blog-break {
+    color: black;
+}
+
+.coming-soon {
+    text-align: center;
+}
+
+.aboutpics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.aboutpict {
+    max-width: 300px;
+    height: auto;
+    border-style: double;
+    border-color: white;
+    border-width: 20px;
+}
+.about-title {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 100px;
+    gap: 5px;
+}
+
+/*give page styling*/
+
+.give-container{
+    position: relative;
+    width: 100%;
+}
+
+
+.give-container img {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    animation: slowZoom 7s ease-in-out infinite alternate;
+    transform-origin: center center;
+}
+
+.givetextoverlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    color: white;
+    padding-top: 10px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .givetextoverlay {
+        flex-direction: column;
+    }
+}
+
+.givetextoverlay {
+    flex: 1;
+    text-align: center;
+    padding-top: 3%;
+    width: 100%;
+    height: auto;
+    font-size: clamp(1rem, 5vw, 3rem);
+    color: darkblue;
+    font-family: "Story-Script", serif;
+    font-style: italic;
+    text-shadow: -1px 1px 0 white;
+    z-index: 1;
+}
+.givetextoverlay .thanks {
+    width: 100%;
+    height: auto;
+    font-size: clamp(1rem, 5vw, 3rem);
+    flex: 1;
+    color: red;
+    text-align: center;
+    z-index: 1;
+}
+
+/*blog page styling*/
+.blog-header {
+    text-align: center;
+    color: black;
+    text-shadow: -1px 1px 0 white;
+}
+
+/*.blog-text {*/
+/*    flex: 1;*/
+/*    text-align: center;*/
+/*}*/
+.blog-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+/*books container fiction*/
+.books-container-fiction {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 5px;
+    gap: 8px;
+
+}
+
+.books-container-nonfiction {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 5px;
+    gap: 8px;
+
+}
+.fictionnote {
+    padding-top: 10%;
+    text-align: center;
+}
+.fictionnote1 {
+    text-align: center;
+}
+.nonfictionnote {
+    text-align: center;
+    padding-top: 5%;
+}
+.blog-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.blog-container .specialcross {
+    width: 100%;
+    height: auto;
+}
+
+/*daily verse styling*/
+
+.daily-verse-header {
+    color: black;
+    text-align: center;
+    padding-top: 4%;
+    font-size: 100%;
+}
+
+.featured-verse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.verse-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 5px;
+    gap: 8px;
+}
+
+@media screen and (max-width: 600px) {
+    .verse-container {
+        flex-direction: column;
+    }
+}
+.single-verse {
+    width: 100%;
+    height: auto;
+}
+.single-verse:hover {
+    /*animation: enlarge 3s ease-in;*/
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
+.featured-verse img:hover {
+    /*animation: enlarge 3s ease-in;*/
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
+/*footer styling*/
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+    }
+}
+

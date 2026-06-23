@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Story+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <title>FaithFellowship</title>
+
+<style>
+body {
+    background-color: #D9D9D9;
+}
+</style>
+</head>
+<body>
+<div class="logo-and-menu-dark-on-light">
+   <div>
+    <a href="https://www.amazon.com/stores/Norita-Sieffert/author/B00J161BM0">
+        <img src="../static/BestSellerPic.png" class="justlogo" alt="centered"></a>
+    </div>
+    <div class="spacer">
+    </div>
+    <div>
+    <ul>
+        <li><a href="welcome">Welcome</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="books">Books</a></li>
+      <li><a href="watch">Watch</a></li>
+      <li><a href="shop">Shop</a></li>
+      <li><a href="contact">Contact</a></li>
+    </ul>
+    </div>
+</div>
+
+<H1 class="contact-header">We'd love to hear from you.</H1>
+<h2 class="contact-header1">We try to respond within 24 hours.</h2>
+<br>
+
+<div class="contact-flex-box">
+    <div>
+        <img src="../static/grouppic5.png" style="width:500px;" alt="centered">
+    </div>
+    <div class="contact-form">
+        <h2>Contact Dr. Sieffert</h2>
+        <form action="/contact" method="POST" id="contactForm">
+            <label>Name:</label><br>
+            <input type="text" name="name" required><br><br>
+
+            <label>Email:</label><br>
+            <input type="email" name="email" required><br><br>
+
+            <label>Message:</label><br>
+            <textarea name="message" required></textarea><br><br>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <div>
+        <img src="../static/grouppic6.png" style="width:550px" alt=centered">
+    </div>
+</div>
+
+<!-- Container for the success/error message -->
+<div id="response-msg" style="margin-top: 15px; font-weight: bold;"></div>
+
+<!-- JavaScript to handle AJAX submission -->
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the page from reloading
+
+    const form = this;
+    const formData = new FormData(form);
+    const responseMsg = document.getElementById('response-msg');
+
+    // Send data to the Flask backend asynchronously
+    fetch('/contact', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        responseMsg.innerText = data.message;
+
+        if (data.status === 'success') {
+            responseMsg.style.color = 'green';
+            form.reset(); // Clears the form fields on success
+        } else {
+            responseMsg.style.color = 'red';
+        }
+    })
+    .catch(error => {
+        responseMsg.innerText = 'An unexpected error occurred.';
+        responseMsg.style.color = 'red';
+    });
+});
+</script>
+
+<br>
+<br>
+<hr>
+
+
+<div class="footer">
+
+    <div class="footer-facebook">
+        <a href="https://www.facebook.com/norita.sieffert.9" target="_blank" rel="noopener noreferrer"><img src="../static/likeusinblack.png" style="width:300px"></a>
+    </div>
+</div>
+</body>
+</html>
