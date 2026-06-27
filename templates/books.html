@@ -1,39 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Story+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style.css">
-    <meta charset="UTF-8">
-    <title>FaithFellowship</title>
-
+{% extends 'basel.html' %}
+{% block content %}
 <style>
-body {
-    background-color: aliceblue;
-}
+    body {
+        background-color: slategray;
+    }
 </style>
-</head>
-<body>
-<div class="logo-and-menu-dark-on-light">
-    <div>
-    <a href="https://faithfellowshipterrell.org">
-        <img src="../static/ffcotnblackonly.png" class="justlogo" alt="centered"></a>
-    </div>
-    <div class="spacer">
 
-    </div>
-    <div>
-    <ul>
-        <li><a href="welcome">Welcome</a></li>
-      <li><a href="about">About</a></li>
-      <li><a href="books">Books</a></li>
-      <li><a href="watch">Watch</a></li>
-      <li><a href="shop">Shop</a></li>
-      <li><a href="contact">Contact</a></li>
-    </ul>
+<H1 class="fictionnote">Fiction By Dr. Norita Sieffert</H1>
+<H3 class="fictionnote1">(Non-fiction books below)</H3>
+<div class="books-container-fiction">
+  <div class="left">
+    <div class="item"><a href="https://www.amazon.com/Unprepared-Norita-Sieffert-ebook/dp/B00ZSUE1MK/">
+        <img src="../static/unprepared.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="left-1">
+    <div class="item-1"><a href="https://www.amazon.com/dp/B0DC6MXNYK/">
+        <img src="../static/unprepared2.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="left-2">
+    <div class="item-2"><a href="https://www.amazon.com/Morabi-Novel-Norita-Sieffert/dp/1726133508/">
+        <img src="../static/morabi.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="left2-1">
+    <div class="item2-1"><a href="https://www.amazon.com/Colony-Twelve-Novel-Norita-Sieffert/dp/1726136493/">
+        <img src="../static/col12.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left2-2">
+    <div class="item2-2"><a href="https://www.amazon.com/Seer-Remmon-Novel-Norita-Sieffert/dp/1726116522/">
+        <img src="../static/remmon.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="left2-3">
+    <div class="item2-3"><a href="https://www.amazon.com/Stone-Jirrah-Novel-Norita-SIeffert/dp/1726071294/">
+        <img src="../static/jirrah.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left3-1">
+    <div class="item3-1"><a href="https://www.amazon.com/Little-Flower-Koramar-Norita-Sieffert/dp/1726072592/">
+        <img src="../static/flower.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left3-2">
+    <div class="item3-2"><a href="https://www.amazon.com/Face-My-Enemy-Norita-Sieffert/dp/1726057720/">
+        <img src="../static/Face.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left3-3">
+    <div class="item3-3"><a href="https://www.amazon.com/Puzzle-Norita-J-Sieffert/dp/096729990X/">
+        <img src="../static/puzzle.png" style="width:200px" alt="centered"></a></div>
+  </div>
+</div>
+<br>
+<hr>
+<!--Non-fiction start-->
+<H1 class="nonfictionnote">Non-Fiction by Dr. Norita Sieffert</H1>
+<span class="books-container-nonfiction">
+  <div class="left">
+    <div class="item"><a href="https://www.amazon.com/Daniel-A-365-Day-Devotional/dp/B0D1NPVVSF/">
+      <img src="../static/Daniel.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="left-1">
+    <div class="item-1"><a href="https://www.amazon.com/dp/B0DBZ7QVYL">
+      <img src="../static/bestlife.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left-2">
+    <div class="item-2"><a href="https://www.amazon.com/dp/B0DRN2G3YJ/">
+      <img src="../static/becoming.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left2-1">
+    <div class="item2-1"><a href="https://www.amazon.com/Thirty-Days-Secret-Place-Powerful/dp/B0FQ41W929/">
+      <img src="../static/30days.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left2-2">
+    <div class="item2-2"><a href="https://www.amazon.com/Lyrics-Scripture-Hymns-Through-Bible/dp/B0DNT32RBQ">
+      <img src="/static/Lyrics.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left2-3">
+    <div class="item2-3"><a href="https://www.amazon.com/Meditations-Mark-Norita-Sieffert-ebook/dp/B09PF7C599/">
+      <img src="../static/mark.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left3-1">
+    <div class="item3-1"><a href="https://www.amazon.com/Meditations-Acts-Part-One-Chapters/dp/B0DFBV9VVB/">
+      <img src="../static/acts1.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left3-2">
+    <div class="item3-2"><a href="https://www.amazon.com/dp/B0DTT8C1RC/">
+      <img src="../static/acts2.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left3-3">
+    <div class="item3-3"><a href="https://www.amazon.com/Meditations-Acts-Part-Three-Twenty-One/dp/B0FD3YZGRR/">
+      <img src="../static/acts3.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="left4-1">
+    <div class="item4-1"><a href="https://www.amazon.com/Meditations-Acts-Part-Four-Twenty-eight/dp/B0G4QWRXSR/">
+      <img src="../static/acts4.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left4-2">
+    <div class="item4-2"><a href="https://www.amazon.com/Meditations-Non-Pauline-Epistles-Hebrews-Through-ebook/dp/B0BYYC2CP8">
+      <img src="../static/nonpaul.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left4-3">
+    <div class="item4-3"><a href="https://www.amazon.com/dp/B0DC4Q4W9C/">
+      <img src="../static/still.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="left5-1">
+    <div class="item5-1"><a href="https://www.amazon.com/Wise-Wicked-Learn-Selected-Women-ebook/dp/B0BZ35DDT6">
+      <img src="../static/wisewicked.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left5-2">
+    <div class="item5-2"><a href="https://www.amazon.com/Transformed-Becoming-Christ-Like-Areas-Life/dp/1718876025/">
+      <img src="../static/transformedpurple.png" style="width:200px" alt="centered"></a></div>
+  </div>
+
+  <div class="left5-3">
+    <div class="item5-3"><a href="https://www.amazon.com/Treasures-Old-New-Worshiping-Testaments-ebook/dp/B018IJ9SV6/">
+      <img src="../static/treasure.png" style="width:200px" alt="centered"></a></div>
+  </div>
+</span>
+<br>
+<hr>
+<!--this section end-->
+
+
+<div class="footer">
+
+    <div class="footer-facebook">
+        <a href="https://www.facebook.com/norita.sieffert.9" target="_blank" rel="noopener noreferrer"><img src="../static/likeusinwhite.png" style="width:300px"></a>
     </div>
 </div>
-</body>
-</html>
+{% endblock content %}

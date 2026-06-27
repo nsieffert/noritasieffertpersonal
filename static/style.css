@@ -352,69 +352,69 @@ button[type="submit"]:hover {
 /*}*/
 /*studies page styling*/
 
-.bible-study-headline {
-    display: flex;
-    flex-direction: column;
-    padding-top: 10%;
-    font-size: 200%;
-    text-align: center;
-    color: white;
-    text-shadow: -1px 1px 0 black;
-}
+/*.bible-study-headline {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    padding-top: 10%;*/
+/*    font-size: 200%;*/
+/*    text-align: center;*/
+/*    color: white;*/
+/*    text-shadow: -1px 1px 0 black;*/
+/*}*/
 
-.current-study {
-    display: flex;
-    flex-direction: row;
-    padding-top: 10px;
-    gap: 10px;
-    justify-content: center
-}
+/*.current-study {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    padding-top: 10px;*/
+/*    gap: 10px;*/
+/*    justify-content: center*/
+/*}*/
 
-@media screen and (max-width: 600px) {
-    .current-study {
-        flex-direction: column;
-    }
-}
+/*@media screen and (max-width: 600px) {*/
+/*    .current-study {*/
+/*        flex-direction: column;*/
+/*    }*/
+/*}*/
 
-.acts-study-pic {
-    height: auto;
-    width: 100%;
-    max-width: 100%;
-}
+/*.acts-study-pic {*/
+/*    height: auto;*/
+/*    width: 100%;*/
+/*    max-width: 100%;*/
+/*}*/
 
-.studies-text{
-    width: 100%;
-    max-width: 100%;
-}
-.studies-text H1 {
-    color: white;
-    font-style: italic;
-    text-align: center;
-    text-shadow: -1px 1px 0 black;
-}
+/*.studies-text{*/
+/*    width: 100%;*/
+/*    max-width: 100%;*/
+/*}*/
+/*.studies-text H1 {*/
+/*    color: white;*/
+/*    font-style: italic;*/
+/*    text-align: center;*/
+/*    text-shadow: -1px 1px 0 black;*/
+/*}*/
 
-.studies-text h2 {
-    color: white;
-    text-shadow: -1px 1px 0 black;
-}
-.study-books {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+/*.studies-text h2 {*/
+/*    color: white;*/
+/*    text-shadow: -1px 1px 0 black;*/
+/*}*/
+/*.study-books {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 100vh;*/
+/*}*/
 
-.study-books H2 {
-    color: white;
-    text-shadow: -1px 1px 0 black;
-}
+/*.study-books H2 {*/
+/*    color: white;*/
+/*    text-shadow: -1px 1px 0 black;*/
+/*}*/
 
-.study-books img {
-    width: 75%;
-    height: auto;
-    padding-left: 25%;
-}
+/*.study-books img {*/
+/*    width: 75%;*/
+/*    height: auto;*/
+/*    padding-left: 25%;*/
+/*}*/
 
 /*meet the staff styling*/
 .staff-bios {
@@ -570,6 +570,7 @@ button[type="submit"]:hover {
     display: grid;
     grid-template-columns: auto auto auto auto;
     padding: 5px;
+    margin-left: 5%;
     gap: 8px;
 
 }
@@ -579,18 +580,22 @@ button[type="submit"]:hover {
     grid-template-columns: auto auto auto auto;
     padding: 5px;
     gap: 8px;
+    margin-left: 5%;
 
 }
 .fictionnote {
     padding-top: 10%;
     text-align: center;
+    color: white;
 }
 .fictionnote1 {
     text-align: center;
+    color: white;
 }
 .nonfictionnote {
     text-align: center;
     padding-top: 5%;
+    color: white;
 }
 .blog-container {
     display: flex;
